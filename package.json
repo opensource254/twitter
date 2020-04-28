@@ -1,6 +1,6 @@
 {
   "name": "twitterapi",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
@@ -16,5 +16,24 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
-  }
+  },
+  "description": "> This API has been created to be used by our team in order to get the latest tweets from [@MOH_kenya](https://twiiter.com/MOH_kenya).",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opensource254/twitter.git"
+  },
+  "keywords": [
+    "Twitter",
+    "Opesource254",
+    "Kenya",
+    "MOH",
+    "Covid19"
+  ],
+  "author": "Opensource254",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opensource254/twitter/issues"
+  },
+  "homepage": "https://github.com/opensource254/twitter#readme"
 }
