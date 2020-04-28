@@ -17,10 +17,8 @@ Router.get('/', (req, res, next) => {
 })
 
 Router.get('/:user/recent', (req, res) => {
-    console.log(process.env.CONSUMER_KEY)
     let user = req.params.user
     client.get('/statuses/user_timeline.json', { screen_name: `${user}`, count: 15 }, function (error, tweets, response) {
-        console.log(tweets)
         let twts = tweets.map((statuses) => {
             return { tweet: statuses.text, created_at: statuses.created_at }
         })
