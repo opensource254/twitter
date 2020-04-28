@@ -11,7 +11,7 @@
 
 ## Endpoints
 
-### api-url/twitter/:username/latest
+### api-url/twitter/:username/recent
 This returns the latest tweets by the user.
 
 *More features coming*
