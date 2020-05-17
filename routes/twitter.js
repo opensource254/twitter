@@ -27,7 +27,7 @@ Router.get('/:user/recent', (req, res) => {
                 tweet: status.full_text,
                 media: status.entities.media,
                 created_at: status.created_at,
-                user: status.user
+                user: status.user.name
             }
         })
 
