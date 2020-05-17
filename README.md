@@ -11,8 +11,9 @@
 
 ## Endpoints
 
-### api-url/twitter/:username/recent
-This returns the latest tweets by the user.
+|Route                      |Method  | Description                           |
+|:--------------------------|:-------|:--------------------------------------|
+| /twitter/:username/recent |  GET   |  Returns 30 latest tweets from a user |
 
 *More features coming*
 
