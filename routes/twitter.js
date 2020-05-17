@@ -16,11 +16,13 @@ Router.get('/', (req, res, next) => {
     res.json({ message: 'Okay' });
 })
 
+
+
 Router.get('/:user/recent', (req, res) => {
     let user = req.params.user
-    client.get('/statuses/user_timeline.json', { screen_name: `${user}`, count: 20 }, function (error, tweets, response) {
+    client.get('/statuses/user_timeline.json', { screen_name: `${user}`, count: 30, tweet_mode: 'extended' }, function (error, tweets, response) {
         let twts = tweets.map((statuses) => {
-            return { tweet: statuses.text, media: statuses.entities.media, created_at: statuses.created_at }
+            return { tweet: statuses.full_text, media: statuses.entities.media, created_at: statuses.created_at }
         })
 
         res.json({ 'tweets': twts })
