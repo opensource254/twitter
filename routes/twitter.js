@@ -20,7 +20,7 @@ Router.get('/', (req, res, next) => {
 
 Router.get('/:user/recent', (req, res) => {
     let user = req.params.user
-    client.get('/statuses/user_timeline.json', { screen_name: `${user}`, count: 30, tweet_mode: 'extended' }, function (error, tweets, response) {
+    client.get('/statuses/user_timeline.json', { screen_name: `${user}`, count: 100, tweet_mode: 'extended' }, function (error, tweets, response) {
         let twts = tweets.map((status) => {
             return {
                 id: status.id,
