@@ -1,6 +1,6 @@
 {
   "name": "twitterapi",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
@@ -18,7 +18,7 @@
   "devDependencies": {
     "nodemon": "^2.0.3"
   },
-  "description": "> This API has been created to be used by our team in order to get the latest tweets from [@MOH_kenya](https://twiiter.com/MOH_kenya).",
+  "description": "This API has been created to be used by our team in order to get the latest tweets from [@MOH_kenya](https://twiiter.com/MOH_kenya).",
   "main": "app.js",
   "repository": {
     "type": "git",

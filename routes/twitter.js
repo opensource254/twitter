@@ -2,8 +2,9 @@ const Router = require('express').Router()
 const Twitter = require('twitter')
 
 /**
+ * --------------------------------------
  * Create a new Twitter client
- * 
+ * --------------------------------------
  */
 const client = new Twitter({
     consumer_key: process.env.CONSUMER_KEY,
@@ -12,7 +13,7 @@ const client = new Twitter({
     access_token_secret: process.env.ACCESS_TOKEN_SECRET
 });
 
-Router.get('/', (req, res, next) => {
+Router.get('/', (_req, res, _next) => {
     res.json({ message: 'Okay' });
 })
 
@@ -20,7 +21,7 @@ Router.get('/', (req, res, next) => {
 
 Router.get('/:user/recent', (req, res) => {
     let user = req.params.user
-    client.get('/statuses/user_timeline.json', { screen_name: `${user}`, count: 100, tweet_mode: 'extended' }, function (error, tweets, response) {
+    client.get('/statuses/user_timeline.json', { screen_name: `${user}`, count: 100, tweet_mode: 'extended' }, function (_error, tweets, _response) {
         let twts = tweets.map((status) => {
             return {
                 id: status.id,
