@@ -4,6 +4,7 @@ const Twitter = require('twitter')
 /**
  * --------------------------------------
  * Create a new Twitter client
+ * This is for version one of the API
  * --------------------------------------
  */
 const client = new Twitter({

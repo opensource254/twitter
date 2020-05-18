@@ -11,9 +11,9 @@
 
 ## Endpoints
 
-|Route                      |Method  | Description                           |
-|:--------------------------|:-------|:--------------------------------------|
-| /twitter/:username/recent |  GET   |  Returns 30 latest tweets from a user |
+|Route                         |Method  | Description                               |
+|:-----------------------------|:-------|:------------------------------------------|
+| /api/v1/:username?count=20   |  GET   |  Returns :count latest tweets from a user |
 
 *More features coming*
 
