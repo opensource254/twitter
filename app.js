@@ -7,6 +7,7 @@ const cors = require('cors')
 
 const indexRouter = require('./routes/index');
 const twitterRouter = require('./routes/twitter');
+const ApiV2 = require('./api/v2/api')
 
 const app = express();
 
@@ -19,5 +20,6 @@ app.use(cors())
 
 app.use('/', indexRouter);
 app.use('/twitter', twitterRouter);
+app.use('/api/v1', ApiV2)
 
 module.exports = app;
