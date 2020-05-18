@@ -15,26 +15,13 @@ const client = new Twitter({
 });
 
 Router.get('/', (_req, res, _next) => {
-    res.json({ message: 'Okay' });
+    res.json('This endpoint has been deprecated please use /api/v2');
 })
 
 
 
 Router.get('/:user/recent', (req, res) => {
-    let user = req.params.user
-    client.get('/statuses/user_timeline.json', { screen_name: `${user}`, count: 100, tweet_mode: 'extended' }, function (_error, tweets, _response) {
-        let twts = tweets.map((status) => {
-            return {
-                id: status.id,
-                tweet: status.full_text,
-                media: status.entities.media,
-                created_at: status.created_at,
-                user: status.user.name
-            }
-        })
-
-        res.json({ 'tweets': twts })
-    });
+    res.json('This endpoint has been deprecated please use /api/v2');
 })
 
 module.exports = Router
