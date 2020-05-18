@@ -1,5 +1,7 @@
 const Router = require('express').Router()
 const client = require('./twitter')
+const cacheMiddleware = require('./middleware/cache')
+
 
 /**
  * -------------------------------------------------
@@ -8,7 +10,7 @@ const client = require('./twitter')
  * 
  * -----------------------------------------------
  */
-Router.get('/:username', async (req, res, _next) => {
+Router.get('/:username', cacheMiddleware(600), async (req, res, _next) => {
     let count = 100
     const username = req.params.username
 
