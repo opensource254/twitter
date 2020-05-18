@@ -20,6 +20,6 @@ app.use(cors())
 
 app.use('/', indexRouter);
 app.use('/twitter', twitterRouter);
-app.use('/api/v1', ApiV2)
+app.use('/api/v2', ApiV2)
 
 module.exports = app;
