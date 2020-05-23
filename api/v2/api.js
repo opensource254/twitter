@@ -1,7 +1,8 @@
 const Router = require('express').Router()
 const client = require('./twitter')
 const cacheMiddleware = require('./middleware/cache')
-
+const moment = require('moment')
+const formatInRelativeTime = require('./mixins/relativeTime')
 
 /**
  * -------------------------------------------------
@@ -26,12 +27,13 @@ Router.get('/:username', cacheMiddleware(600), async (req, res, _next) => {
                 tweet: status.full_text,
                 media: status.entities.media,
                 created_at: status.created_at,
+                realtive_time: formatInRelativeTime(status.created_at),
                 user: status.user.name
             }
         })
         res.json(twts)
     } catch (error) {
-        res.status(503)
+        res.status(500)
         res.json(error)
     }
 })
