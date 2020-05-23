@@ -10,7 +10,7 @@ const formatTweets = (tweets = []) => {
             tweet: status.full_text,
             media: status.entities.media,
             created_at: status.created_at,
-            realtive_time: relativeTime(status.created_at),
+            relative_time: relativeTime(status.created_at),
             user: status.user.name
         }
     })
