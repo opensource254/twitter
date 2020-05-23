@@ -15,6 +15,60 @@
 |:-----------------------------|:-------|:------------------------------------------|
 | /api/v1/:username?count=20   |  GET   |  Returns :count latest tweets from a user |
 
+
+
+## Sample Response 
+```json
+    {
+    "id": 1264226668803231700,
+    "tweet": "Turkana County enhances screening for coronavirus through community health volunteers at Loima Subcounty.\n\n#KomeshaCorona campaign. https://t.co/H3Z2QrEUJW",
+    "media": [
+      {
+        "id": 1264225878764130300,
+        "id_str": "1264225878764130304",
+        "indices": [
+          132,
+          155
+        ],
+        "media_url": "http://pbs.twimg.com/media/EYtuvROXkAAkpvt.jpg",
+        "media_url_https": "https://pbs.twimg.com/media/EYtuvROXkAAkpvt.jpg",
+        "url": "https://t.co/H3Z2QrEUJW",
+        "display_url": "pic.twitter.com/H3Z2QrEUJW",
+        "expanded_url": "https://twitter.com/MOH_Kenya/status/1264226668803231748/photo/1",
+        "type": "photo",
+        "sizes": {
+          "thumb": {
+            "w": 150,
+            "h": 150,
+            "resize": "crop"
+          },
+          "large": {
+            "w": 1024,
+            "h": 666,
+            "resize": "fit"
+          },
+          "small": {
+            "w": 680,
+            "h": 442,
+            "resize": "fit"
+          },
+          "medium": {
+            "w": 1024,
+            "h": 666,
+            "resize": "fit"
+          }
+        }
+      }
+    ],
+    "created_at": "Sat May 23 16:08:20 +0000 2020",
+    "realtive_time": "8 minutes ago",
+    "user": "Ministry of Health"
+  },
+```
+
+## Demo
+Visit this link [https://twitter.covid19kenya.site/api/v2/moh_kenya?count=20](https://twitter.covid19kenya.site/api/v2/moh_kenya?count=20) to get the latest 20 tweets from MOH Kenya
+
 *More features coming*
 
 Please visit our [Guidelines](https://opensource254.github.io/guidelines)
