@@ -61,7 +61,7 @@
       }
     ],
     "created_at": "Sat May 23 16:08:20 +0000 2020",
-    "realtive_time": "8 minutes ago",
+    "relative_time": "8 minutes ago",
     "user": "Ministry of Health"
   },
 ```
