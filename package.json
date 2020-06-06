@@ -21,7 +21,7 @@
     "nodemon": "^2.0.3"
   },
   "description": "This API has been created to be used by our team in order to get the latest tweets from [@MOH_kenya](https://twiiter.com/MOH_kenya).",
-  "main": "app.js",
+  "main": "./bin/www",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/opensource254/twitter.git"
