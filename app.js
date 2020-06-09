@@ -6,8 +6,8 @@ const logger = require('morgan');
 const cors = require('cors')
 
 const indexRouter = require('./routes/index');
-const twitterRouter = require('./routes/twitter');
-const ApiV2 = require('./api/v2/api')
+const deprecated = require('./api/deprecated')
+const ApiRouter = require('./api/api');
 
 const app = express();
 
@@ -19,7 +19,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors())
 
 app.use('/', indexRouter);
-app.use('/twitter', twitterRouter);
-app.use('/api/v2', ApiV2)
+app.use('/twitter', deprecated);
+app.use('/api/v1', deprecated);
+app.use('/api/v2', ApiRouter);
+app.get('*', (_req, res) => {
+    res.status(404).json('This resource is not available. That\'s all we know 😢')
+})
 
 module.exports = app;
