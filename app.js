@@ -1,12 +1,12 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const cors = require('cors')
+const cors = require('cors');
 
 const indexRouter = require('./routes/index');
-const deprecated = require('./api/deprecated')
+const deprecated = require('./api/deprecated');
 const ApiRouter = require('./api/api');
 
 const app = express();
@@ -23,7 +23,7 @@ app.use('/twitter', deprecated);
 app.use('/api/v1', deprecated);
 app.use('/api/v2', ApiRouter);
 app.get('*', (_req, res) => {
-    res.status(404).json('This resource is not available. That\'s all we know 😢')
+    res.status(404).json('This resource is not available. That\'s all we know 😢');
 })
 
 module.exports = app;

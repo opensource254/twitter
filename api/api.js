@@ -1,7 +1,7 @@
 const Router = require('express').Router()
-const client = require('./twitter')
-const cacheMiddleware = require('./middleware/cache')
-const formatTweets = require('./mixins/formatTweets')
+const client = require('./twitter');
+const cacheMiddleware = require('./middleware/cache');
+const formatTweets = require('./mixins/formatTweets');
 
 /**
  * -------------------------------------------------
