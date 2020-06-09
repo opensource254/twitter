@@ -1,4 +1,5 @@
 # Twitter API
+![Node.js CI](https://github.com/opensource254/twitter/workflows/Node.js%20CI/badge.svg)
 > This API has been created to be used by our team in order to get the latest tweets from [@MOH_kenya](https://twiiter.com/MOH_kenya).
 
 ## Quick start
