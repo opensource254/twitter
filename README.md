@@ -1,8 +1,8 @@
 # Twitter API
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1775d1a634714558a7768baeea5864fd)](https://app.codacy.com/gh/opensource254/twitter?utm_source=github.com&utm_medium=referral&utm_content=opensource254/twitter&utm_campaign=Badge_Grade_Dashboard)
-
 ![Node.js CI](https://github.com/opensource254/twitter/workflows/Node.js%20CI/badge.svg)
+![Code scanning - action](https://github.com/opensource254/twitter/workflows/Code%20scanning%20-%20action/badge.svg)
 > This API has been created to be used by our team in order to get the latest tweets from [@MOH_kenya](https://twiiter.com/MOH_kenya).
 
 ## Quick start
