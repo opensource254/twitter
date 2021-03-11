@@ -17,7 +17,7 @@
 
 |Route                         |Method  | Description                               |
 |:-----------------------------|:-------|:------------------------------------------|
-| /api/v1/:username?count=20   |  GET   |  Returns :count latest tweets from a user |
+| /api/v2/:username?count=20   |  GET   |  Returns :count latest tweets from a user |
 
 
 
