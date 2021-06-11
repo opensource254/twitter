@@ -71,7 +71,7 @@
 ```
 
 ## Demo
-Visit this link [https://twitter.covid19kenya.site/api/v2/moh_kenya?count=20](https://twitter.covid19kenya.site/api/v2/moh_kenya?count=20) to get the latest 20 tweets from MOH Kenya
+Visit this link [https://twitter.opensource254.co.ke/api/v2/moh_kenya?count=20](https://twitter.copensource254.co.ke/api/v2/moh_kenya?count=20) to get the latest 20 tweets from MOH Kenya
 
 ## API Documentation
 You can find a detailed documentation [Here](https://documenter.getpostman.com/view/8468789/SztD4SNM)
