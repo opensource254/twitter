@@ -11,7 +11,7 @@
     "cookie-parser": "~1.4.6",
     "cors": "^2.8.5",
     "debug": "~4.3.3",
-    "dotenv": "^14.2.0",
+    "dotenv": "^14.3.0",
     "express": "~4.17.2",
     "memory-cache": "^0.2.0",
     "moment-timezone": "^0.5.34",
