@@ -21,7 +21,7 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
-    "mocha": "^9.1.4",
+    "mocha": "^9.2.0",
     "nodemon": "^2.0.15"
   },
   "description": "This API has been created to be used by our team in order to get the latest tweets from [@MOH_kenya](https://twiiter.com/MOH_kenya).",
