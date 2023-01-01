@@ -22,7 +22,7 @@
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
     "mocha": "^10.2.0",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.20"
   },
   "description": "This API has been created to be used by our team in order to get the latest tweets from [@MOH_kenya](https://twiiter.com/MOH_kenya).",
   "main": "./bin/www",
