@@ -1,3 +1,4 @@
+const { expect } = require('chai');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const app = require('../app');
@@ -21,8 +22,11 @@ describe('Landing Page', () => {
 })
 
 describe('API Calls', () => [
-    // TODO add API test functionality
-    it('This passes for now pending proper config', (done) => {
-        done();
+    it('Should get tweets by a user', async () => {
+        const res = await chai.request(app)
+            .get('/api/v3/opensource254?count=5')
+            expect(res.status).equals(200)
+            expect(res.body).to.be.an('array')
+            expect(res.body.length).equals(5)
     })
 ]);
