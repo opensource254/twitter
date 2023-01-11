@@ -21,7 +21,8 @@ app.use(cors())
 app.use('/', indexRouter);
 app.use('/twitter', deprecated);
 app.use('/api/v1', deprecated);
-app.use('/api/v2', ApiRouter);
+app.use('/api/v2', deprecated);
+app.use('/api/v3', ApiRouter)
 app.get('*', (_req, res) => {
     res.status(404).json('This resource is not available. That\'s all we know 😢');
 })

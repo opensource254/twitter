@@ -10,19 +10,32 @@ const formatTweets = require('./mixins/formatTweets');
  * 
  * -----------------------------------------------
  */
-Router.get('/:username', cacheMiddleware(600), async (req, res, _next) => {
+Router.get('/:username', cacheMiddleware(600), async (req, res, next) => {
     let count = 100
     const username = req.params.username
+
+    if (!username) {
+        res.status(400)
+    }
 
     if (req.query.count) {
         count = req.query.count
     }
 
     try {
-        const tweets = await client.get('/statuses/user_timeline.json', { screen_name: `${username}`, count: count, tweet_mode: 'extended' })
-        res.json(formatTweets(tweets))
+        const user = await client.users.findUserByUsername(username, { 'user.fields': ['id', 'public_metrics', 'created_at'], 'expansions': ['pinned_tweet_id'] })
+        const tweets = await client.tweets.usersIdTweets(user.data.id, {
+            'tweet.fields': [
+                'attachments',
+                'text'
+            ],
+            'max_results': count,
+            'media.fields': ['url', 'alt_text', 'duration_ms'],
+            'user.fields': ['name'],
+        },)
+        res.json(tweets.data)
     } catch (error) {
-        res.status(500).json({ error: error })
+        next(error)
     }
 })
 
