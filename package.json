@@ -14,7 +14,7 @@
     "dotenv": "^16.0.3",
     "express": "~4.18.2",
     "memory-cache": "^0.2.0",
-    "moment-timezone": "^0.5.40",
+    "moment-timezone": "^0.5.42",
     "morgan": "~1.10.0",
     "twitter": "^1.7.1",
     "twitter-api-sdk": "^1.2.1"
